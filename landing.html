@@ -4,10 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles.css">
   <title>Noted</title>
 </head>
 <body>
-  <h1>Hello World</h1>
-  
+  <!-- start header -->
+  <header>
+    <div>
+      <h1>Noted</h1>
+      <p>A Tool for generating a new random artist to listen to on Spotify!</p>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2>Enter information in the prompts below to generate an artist based on the information entered</h2>
+    </div>
+    <!-- Question prompts container -->
+    <div class="question-prompts">
+      <!-- Genre prompt -->
+      <div class="genre">
+        <h3>Select Genre</h3>
+        <select name="genre" id="genre-select">
+          <!-- insert genres to select from spotify api ? -->
+          <option value="Select Genre" id="genre-option"></option>
+        </select>
+      </div>
+      <!-- decade prompt -->
+      <div class="decade">
+        <h3>Select Decade</h3>
+        <select name="decade" id="decade-select">
+          <!-- insert decade to select from spotify api -->
+          <option value="Select Decade" id="decade-option"></option>
+        </select>
+      </div>
+    </div>
+  </main>
+  <script></script>
 </body>
 </html>
