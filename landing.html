@@ -21,17 +21,14 @@
       <h2 class="col-6">Enter information in the prompts below to generate an artist based on the information entered</h2>
     </div>
     <!-- Question prompts container -->
-    <div class="question-prompts d-flex flex-column justify-content-center">
-      <!-- Genre prompt -->
-      <div class="genre col-6 ">
-        <h3 class="">Select Genre</h3>
+
         <select name="genre" id="genre-select">
           <!-- insert genres to select from spotify api ? -->
           <option value="Select Genre" id="genre-option"></option>
         </select>
       </div>
       <!-- decade prompt -->
-      <div class="decade col-6">
+
         <h3>Select Decade</h3>
         <select name="decade" id="decade-select">
           <!-- insert decade to select from spotify api -->
@@ -39,7 +36,7 @@
         </select>
       </div>
       <!-- related artist prompt -->
-      <div class="related-artist col-6">
+
         <h3>Choose Artists You Like</h3>
         <!-- auto complete artists that people started typing in from spotify api-->
         <input type="text" placeholder="Begin Typing Artists" id="related-artist-select">
