@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Noted
+  </title>
+</head>
+<body>
+  <header>
+    <h1>Noted</h1>
+    <p>View the top songs and albums of an artist and their upcoming tour dates!</p>
+  </header>
+  <main>
+    <!-- artist entry text box -->
+    <div>
+      <h2>Type in artist to see their top songs and albums</h2>
+      <input type="text" placeholder="Enter Artist Here" id="artist-search">
+    </div>
+    <!-- left column with artist display picture and artist name with bio -->
+    <div class="left-column">
+      <!-- get image data from api call -->
+      <img id="artist-profile-image" class="artist-profile-image" src="" alt="">
+      <div>
+        <h3 class="artist-name" id="artist-name"></h3>
+      </div>
+      <!-- artist bio  -->
+      <div>
+        <p class="artist-bio" id="artist-bio"></p>
+      </div>
+    </div>
+    <!-- container for right column -->
+    <div class="right-column">
+    <!-- begin  top 5 songs/albums on right column  -->
+      <div class="song-album-container">
+        <h3 class="top-songs">Top 5 Songs</h3>
+        <div class="song-container">
+          <p id="song-1"></p>
+          <p id="song-2"></p>
+          <p id="song-3"></p>
+          <p id="song-4"></p>
+          <p id="song-5"></p>
+        </div>
+        <h3 class="top-albums">Top 5 Albums</h3>
+        <div>
+          <p id="album-1"></p>
+          <p id="album-2"></p>
+          <p id="album-3"></p>
+          <p id="album-4"></p>
+          <p id="album-5"></p>
+        </div>
+      </div>
+      <!-- Tour Dates start -->
+      <div class="tour-dates-container">
+        <h3 class="tour-dates-title">Upcoming Tour Dates</h3>
+        <div class="tour-date-1">
+          <p class="tour-date" id="date-1"></p>
+          <p class="tour-venue" id="venue-1"></p>
+        </div>
+        <div class="tour-date-2">
+          <p class="tour-date" id="date-2"></p>
+          <p class="tour-venue" id="venue-2"></p>
+        </div>
+        <div class="tour-date-3">
+          <p class="tour-date" id="date-3"></p>
+          <p class="tour-venue" id="venue-3"></p>
+        </div>
+        <div class="tour-date-4">
+          <p class="tour-date" id="date-4"></p>
+          <p class="tour-venue" id="venue-4"></p>
+        </div>
+        <div class="tour-date-5">
+          <p class="tour-date" id="date-5"></p>
+          <p class="tour-venue" id="venue-5"></p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div>
+        <h3>Thanks for using Noted!</h3>
+        <p>designed by Mitchell Driesenga, Aireeal Blackmon, Mario Butler, and Sarah Ringwood.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
