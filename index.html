@@ -17,7 +17,12 @@
     <!-- artist entry text box -->
     <div>
       <h2>Type in artist to see their top songs and albums</h2>
-      <input type="text" placeholder="Enter Artist Here" id="artist-search">
+      <!-- <input type="text" placeholder="Enter Artist Here" id="artist-search"> -->
+      <form id="artist-form" class="card-body">
+        <label class="form-label" for="artist">Artist Name</label>
+        <input name="artist" id="artist" type="text" autofocus="true" class="form-input" />
+        <button type="submit" class="btn">Enter</button>
+      </form>
     </div>
     <!-- left column with artist display picture and artist name with bio -->
     <div class="left-column">
@@ -84,5 +89,7 @@
       </div>
     </footer>
   </main>
+
+  <script src="./assets/script.js"></script>
 </body>
 </html>
