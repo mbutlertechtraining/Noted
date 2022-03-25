@@ -24,3 +24,5 @@ submitBtn.addEventListener('click', function(event) {
 
 
 //}) 
+
+API.code and key is still needed
