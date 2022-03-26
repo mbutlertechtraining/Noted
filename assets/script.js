@@ -56,9 +56,12 @@ var getTopFive = function(id) {
                 
                 let songContainer = $('#song-container')
                 songContainer.append(`<img id="albumCover" src=${songImage}>`);
-                let button = songContainer.append(`<button class="song-title" id="${songTitle}">${songTitle}</button>`);
-               
-                button.onclick = getSongInfo();
+                songContainer.append(`<button class="song-title" id="${songTitle}">${songTitle}</button>`);
+                let button = document.getElementById(songTitle);
+                console.log(button);
+                button.addEventListener("click", function() {
+                    getSongInfo(songTitle);
+                });
                 //console.log(songImage);
                 //console.log(songTitle);
 
@@ -66,7 +69,6 @@ var getTopFive = function(id) {
         })
         .catch(err => console.error(err));
 };
-
 
 
 artistFormEl.addEventListener("submit", formSubmitHandler);
@@ -93,11 +95,9 @@ fetch( apiUrl, geniusApi)
 	.then(response => response.json())
 	.then(response => {
 
-            console.log(response)
+            console.log(response.response.hits[0].result.url)
             console.log(songTitle)
         }
     )
 	.catch(err => console.error(err));
 };
-
-//getSongInfo();

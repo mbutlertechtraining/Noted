@@ -27,3 +27,5 @@ fetch(`https://genius.p.rapidapi.com/search?q=${artistSearch.value}`, options)
 
 
 //}) 
+
+API.code and key is still needed
