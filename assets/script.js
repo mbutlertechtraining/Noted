@@ -1,6 +1,6 @@
 var artistFormEl = document.querySelector("#artist-form");
 var artistInputEl = document.querySelector("#artist");
-var artistContainerEl = document.querySelector("#artist-name");
+var artistContainerEl = document.querySelector(".song-container");
 
 const options = {
 	method: 'GET',
@@ -16,6 +16,7 @@ var formSubmitHandler = function(event) {
     var artistName = artistInputEl.value.trim();
 
     if (artistName) {
+        artistContainerEl.textContent = "";
         getArtist(artistName)
         .then(artist => {
             console.log(artist);
@@ -55,8 +56,9 @@ var getTopFive = function(id) {
                 
                 let songContainer = $('#song-container')
                 songContainer.append(`<img id="albumCover" src=${songImage}>`);
-                songContainer.append(`<p id="songTitle">${songTitle}</p>`);
-                
+                let button = songContainer.append(`<button class="song-title" id="${songTitle}">${songTitle}</button>`);
+               
+                button.onclick = getSongInfo();
                 //console.log(songImage);
                 //console.log(songTitle);
 
@@ -65,4 +67,37 @@ var getTopFive = function(id) {
         .catch(err => console.error(err));
 };
 
+
+
 artistFormEl.addEventListener("submit", formSubmitHandler);
+
+// Begin Genius Api Use
+
+var songTitleButton = document.getElementById("#songTitle");
+
+//songTitleButton.addEventListener("click", function(event) {});
+
+const geniusApi = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'genius.p.rapidapi.com',
+		'X-RapidAPI-Key': 'fc6f66fd96mshdbec18f03d4c96fp1de54cjsne13ca5b7d4c6'
+	}
+};
+
+//  Genius Search Function
+
+function getSongInfo (songTitle) {
+    var apiUrl = `https://genius.p.rapidapi.com/search?q=${songTitle}`
+fetch( apiUrl, geniusApi)
+	.then(response => response.json())
+	.then(response => {
+
+            console.log(response)
+            console.log(songTitle)
+        }
+    )
+	.catch(err => console.error(err));
+};
+
+//getSongInfo();
