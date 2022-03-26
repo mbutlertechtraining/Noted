@@ -1,6 +1,6 @@
 var artistFormEl = document.querySelector("#artist-form");
 var artistInputEl = document.querySelector("#artist");
-var artistContainerEl = document.querySelector("#artist-name");
+var artistContainerEl = document.querySelector(".song-container");
 
 const options = {
 	method: 'GET',
@@ -16,6 +16,7 @@ var formSubmitHandler = function(event) {
     var artistName = artistInputEl.value.trim();
 
     if (artistName) {
+        artistContainerEl.textContent = "";
         getArtist(artistName)
         .then(artist => {
             console.log(artist);
