@@ -13,10 +13,8 @@ const options = {
 var formSubmitHandler = function(event) {
     event.preventDefault();
 
-    // get value from input element
     var artistName = artistInputEl.value.trim();
 
-    // make sure there's a value in the artistName variable
     if (artistName) {
         getArtist(artistName)
         .then(artist => {
@@ -37,8 +35,8 @@ var getArtist = function(artist) {
     return fetch(apiURL, options)
 	    .then(response => response.json())
 	    .then(response => {
+            console.log(response.data);
             return (response.data[0]);
-            // displayArtist(response.data[0].name);
         })
 	    .catch(err => console.error(err));
 };
@@ -50,27 +48,21 @@ var getTopFive = function(id) {
     return fetch(apiURL, options)
         .then(response => response.json())
         .then(response => {
-            return (response);
+            for (let i = 0; i < response.data.length; i++)
+            {
+                let songImage = response.data[i].album.cover;
+                let songTitle = response.data[i].title;
+                
+                let songContainer = $('#song-container')
+                songContainer.append(`<img id="albumCover" src=${songImage}>`);
+                songContainer.append(`<p id="songTitle">${songTitle}</p>`);
+                
+                //console.log(songImage);
+                //console.log(songTitle);
+
+            }
         })
         .catch(err => console.error(err));
 };
-
-var displayArtist = function(data) {
-    console.log(data);
-    // // artistContainerEl.textContent = "";
-
-    // var artistName = response.data[0].name;
-
-    // var artistEl = document.createElement("h2");
-    // artistEl.textContent = artistName;
-
-    // artistContainerEl.appendChild(artistEl);
-
-};
-
-var displayTopFive = function() {
-
-};
-
 
 artistFormEl.addEventListener("submit", formSubmitHandler);
