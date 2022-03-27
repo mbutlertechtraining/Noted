@@ -1,34 +1,66 @@
-.question-prompts{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 1vh;
+body{
+    background: linear-gradient(to left top, blue, red);
+    background-attachment: fixed;
+    font-family:'Times New Roman', Times, serif;
+    position: relative;
+    font-size: medium;
 }
-
-.genre h3, 
-.decade h3,
-.related-artist h3
-{
-    font-size: 4vw;
+.landing{
+     color:#9256c8;
+}
+.col-6 h2{
+    padding: 5%
+    
+}
+.container {
+    padding: 2%, 22%;
+    width: 50%;
+    text-align: center;
+    color: blue;
+    background-color: #9256c8;
+    border-style: double;
+    border: 10%;
+    border-color:blue;
+    
+}
+.form-label{
+    font-size: 2vw;
     border-radius: 10px;
     padding: 2%;
     text-align: center;
     height: 100%;
 }
-
-.genre h3
-{
-    background: aquamarine;
-}
-
-.decade h3
-{
-    background: pink;
-
-}
-
-.related-artist h3
-{
-    background: lightcoral;
+.song-album-container h3{
+    width: 50%;
+    color: blue;
+    padding: 2%, 22%;
+    text-align:center;
+    background-color: #9256c8;
+    border-style: double;
+    border: 10%;
+    border-color: blue;
 
 }
+
+  .btn{
+    background-color:blue; 
+    border: ;
+    color: white;
+    padding: 10px 15px;
+    margin: 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  
+  footer{
+    background:#9256c8;
+    width: 100%;
+    padding: 40px 35px;
+    text-align: center;
+    color: blue;
+    position: absolute;
+  }
+  

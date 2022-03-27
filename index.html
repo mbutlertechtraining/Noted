@@ -11,16 +11,19 @@
   </title>
 </head>
 <body>
-  <header>
-    <h1>Noted</h1>
-    <p>View the top songs and albums of an artist and their upcoming tour dates!</p>
-  </header>
+  <header class="landing">
+    <h1 class="d-flex justify-content-center">Noted</h1>
+    <h2 class="d-flex justify-content-center">A Tool for Generating Information About Your Favorite Artist!</h2>
+</header>
   <main>
     <!-- artist entry text box -->
-    <div>
-      <h2>Type in artist to see their top songs and albums</h2>
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <h2 class="col-6">Check Out Any Artist's Top 5 Songs!</h2>
+    </div>
+
       <!-- <input type="text" placeholder="Enter Artist Here" id="artist-search"> -->
-      <form id="artist-form" class="card-body">
+      <form id="artist-form" class="d-flex justify-content-center">
         <label class="form-label" for="artist">Artist Name</label>
         <input name="artist" id="artist" type="text" autofocus="true" class="form-input" />
         <button type="submit" class="btn">Enter</button>
@@ -39,27 +42,25 @@
       </div>
     </div>
     <!-- container for right column -->
-    <div class="right-column">
+    <div class="d-flex justify-content-center">
     <!-- begin  top 5 songs/albums on right column  -->
       <div class="song-album-container">
-        <h3 class="top-songs">Top 5 Songs</h3>
-        <div class="song-container" id= "song-container">
+          <h3 class="justify-content-center">Top 5 Songs</h3>
+      </div>
+      <div class="song-container" id= "song-container">
           <p id="song-1"></p>
           <p id="song-2"></p>
           <p id="song-3"></p>
           <p id="song-4"></p>
           <p id="song-5"></p>
-        </div>
-        
-      </div>
-     
+      </div>  
     </div>
-    <footer class="footer">
+    <footer class="d-flex justify-content-center">
       <div>
-        <h3>Thanks for using Noted!</h3>
-        <p>designed by Mitchell Driesenga, Aireeal Blackmon, Mario Butler, and Sarah Ringwood.</p>
+        <h3>Thanks for Using Noted!</h3>
+        <p>Designed by Mitchell Driesenga, Aireeal Blackmon, Mario Butler, and Sarah Ringwood.</p>
       </div>
-    </footer>
+      </footer> 
   </main>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
