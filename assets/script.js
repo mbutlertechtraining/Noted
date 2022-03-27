@@ -96,7 +96,17 @@ fetch( apiUrl, geniusApi)
 	.then(response => {
 
             console.log(response.response.hits[0].result.url)
-            console.log(songTitle)
+            // console.log(songTitle)
+            var lyricLink = response.response.hits[0].result.url;
+            console.log(lyricLink);
+            var lyricContainer = $('#song-lyrics');
+            lyricContainer.append(`<button class="song-lyrics btn-primary" id="lyric-btn" type="submit" onClick="${lyricLink}">Get ${songTitle} lyrics`);
+            var btn = document.getElementById('lyric-btn');
+            btn.addEventListener("click", ()=> {
+                window.open(lyricLink, '_blank');
+            });
+            
+
         }
     )
 	.catch(err => console.error(err));
