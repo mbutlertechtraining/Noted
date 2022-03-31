@@ -5,13 +5,16 @@
 
 
 ## Description
-As a user, I want to generate a random password which gives me the option to choose numbers, upper and lowe case letters, and special characters generate a password.  
+A team project to generate a "Top Five Artist List" and adding a link to the song lyrics 
 
 ## Deployment:
 GitHub Repo: https://github.com/mbutlertechtraining/Noted.git
 GitHub Pages: https://mitchdriesenga.github.io/Noted/
+
 https://github.com/mbutlertechtraining/Noted/blob/main/Noted%20Team%20Project.png
+
 Noted Team Project.png
+
 ## Installation:
 1. No installation if needed
 2. You may view code through access of GitHub, link provided above.
